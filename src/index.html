@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback - University Notice Board</title>
-  <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>University Notice Board</title>
+  <link rel="stylesheet" href="../styles/style.css" />
 </head>
 <body>
   <header>
-    <h1>Student Feedback</h1>
-    <p>We value your feedback to improve our services</p>
+    <h1>University Digital Notice Board</h1>
+    <p>Your gateway to all academic updates</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="notices.html">Academic Notices</a></li>
       <li><a href="exams.html">Exam Schedules</a></li>
       <li><a href="admissions.html">Admissions</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="feedback.html">Feedback</a></li>
-      
     </ul>
   </nav>
 
   <main>
-    <section>
-      <h2>Submit Your Feedback</h2>
+    <section class="notice">
+      <h2>Latest Notices</h2>
+      <ul>
+        <li>Spring semester registration opens from 15th January 2026.</li>
+        <li>COVID-19 safety protocols remain mandatory on campus.</li>
+        <li>Library timings extended till 9 PM on weekdays.</li>
+        <li>Scholarship applications deadline: 31st January 2026.</li>
+      </ul>
+    </section>
 
-      <form action="#" method="post">
-        <label for="name">Full Name</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email Address</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Your Feedback</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Submit Feedback</button>
-      </form>
+    <section class="notice">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>Annual Science Symposium - 20th February 2026</li>
+        <li>Guest Lecture on AI by Prof. Sarah Khan - 5th March 2026</li>
+        <li>Career Fair 2026 - 10th March 2026</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 University Digital Notice Board</p>
+    &copy; 2026 University Digital Notice Board
   </footer>
 </body>
 </html>
