@@ -103,6 +103,7 @@ footer {
     margin: 1rem;
   }
 }
+
 /* ===============================
    Exams Page Styles
    =============================== */
@@ -115,14 +116,14 @@ footer {
 
 .exam-table th,
 .exam-table td {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
 }
 
 .exam-table th {
   background-color: #004080;
-  color: #ffffff;
+  color: #fff;
 }
 
 .exam-table tr:nth-child(even) {
