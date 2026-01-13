@@ -3,79 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions | Uni Notice Board</title>
+    <title>Admissions | University Digital Notice Board</title>
+    <meta name="description" content="Latest admission announcements, key dates, and application steps for the University Digital Notice Board.">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>University Admissions</h1>
-        <p>Latest Admission Announcements</p>
+        <p>Stay on top of eligibility, deadlines, and required documents.</p>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="notices.html">Notices</a></li>
-            <li><a href="exams.html">Exams</a></li>
-            <li><a href="admissions.html" class="active">Admissions</a></li>
+            <li><a href="notices.html">Academic Notices</a></li>
+            <li><a href="exams.html">Exam Schedules</a></li>
+            <li><a href="admissions.html" aria-current="page" class="active">Admissions</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Open Admissions Section -->
-        <section class="notice">
-            <h2>Open Admissions</h2>
+        <section class="notice" aria-labelledby="open-admissions">
+            <h2 id="open-admissions">Open Admissions</h2>
             <ul>
-                <li>
-                    <strong>BS Programs – Fall 2026:</strong> Eligibility: Intermediate / A-Levels. Last Date: 15 March 2026.
-                </li>
-                <li>
-                    <strong>MS Programs:</strong> Eligibility: Relevant BS Degree. Last Date: 20 March 2026.
-                </li>
-                <li>
-                    <strong>PhD Programs:</strong> Eligibility: Relevant MS Degree. Last Date: 25 March 2026.
-                </li>
+                <li><strong>BS Programs – Fall 2026:</strong> Intermediate / A-Levels. Last date: 15 March 2026.</li>
+                <li><strong>MS Programs:</strong> Relevant BS degree. Last date: 20 March 2026.</li>
+                <li><strong>PhD Programs:</strong> Relevant MS degree. Last date: 25 March 2026.</li>
             </ul>
         </section>
 
-        <!-- How to Apply Section -->
-        <section class="notice">
-            <h2>How to Apply</h2>
+        <section class="notice" aria-labelledby="apply-steps">
+            <h2 id="apply-steps">How to Apply</h2>
             <ol>
-                <li>Visit the university admission portal.</li>
-                <li>Fill out the online application form.</li>
-                <li>Upload all required documents (transcripts, certificates, CV).</li>
-                <li>Pay the application fee online.</li>
-                <li>Submit the application before the deadline.</li>
+                <li>Open the admission portal and create an applicant profile.</li>
+                <li>Complete the online form with accurate academic history.</li>
+                <li>Upload required documents (transcripts, certificates, CNIC/passport, CV).</li>
+                <li>Pay the application fee online; save the receipt.</li>
+                <li>Submit before the deadline and monitor email for updates.</li>
             </ol>
         </section>
 
-        <!-- Important Dates Section -->
-        <section class="notice">
-            <h2>Important Dates</h2>
+        <section class="admission-form" aria-labelledby="apply-online">
+            <h2 id="apply-online" class="form-title">Apply Online (Preview Form)</h2>
+            <form>
+                <div class="form-grid">
+                    <div class="input-field">
+                        <label for="full-name">Full Name</label>
+                        <input id="full-name" name="full-name" type="text" placeholder="e.g., Ayesha Khan" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="program">Program</label>
+                        <select id="program" name="program" required>
+                            <option value="" disabled selected>Select program</option>
+                            <option value="bs">BS (Fall 2026)</option>
+                            <option value="ms">MS</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="previous-degree">Previous Degree</label>
+                        <input id="previous-degree" name="previous-degree" type="text" placeholder="e.g., BS Computer Science" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="cnic">CNIC / Passport</label>
+                        <input id="cnic" name="cnic" type="text" placeholder="e.g., 12345-6789012-3" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="statement">Statement of Purpose</label>
+                        <textarea id="statement" name="statement" placeholder="Briefly describe your goals" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <label class="input-field" style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" name="agree" required>
+                        I confirm the information provided is accurate.
+                    </label>
+                    <button class="btn-primary" type="submit">Submit Preview</button>
+                </div>
+            </form>
+            <div class="info-card" role="note" aria-label="Submission notice">
+                This is a preview form. Submit applications through the official admission portal to be considered.
+            </div>
+        </section>
+
+        <section class="notice" aria-labelledby="important-dates">
+            <h2 id="important-dates">Important Dates</h2>
             <ul>
-                <li>Application Start: 1 February 2026</li>
-                <li>Application End: 25 March 2026</li>
-                <li>Entrance Test (if required): 5 April 2026</li>
-                <li>Merit List Announcement: 15 April 2026</li>
+                <li>Application start: 1 February 2026</li>
+                <li>Application end: 25 March 2026</li>
+                <li>Entrance test (if required): 5 April 2026</li>
+                <li>Merit list announcement: 15 April 2026</li>
+                <li>Fee submission deadline: 25 April 2026</li>
             </ul>
         </section>
 
-        <!-- Contact Section -->
-        <section class="notice">
-            <h2>Contact Admission Office</h2>
+        <section class="notice" aria-labelledby="contacts">
+            <h2 id="contacts">Contact Admission Office</h2>
             <p>Email: <a href="mailto:admissions@university.edu">admissions@university.edu</a></p>
             <p>Phone: +92-300-1234567</p>
+            <p>Timings: Monday to Friday, 9:00 AM – 5:00 PM</p>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2026 Uni Notice Board</p>
+        <p>© 2026 University Digital Notice Board</p>
     </footer>
 </body>
 </html>

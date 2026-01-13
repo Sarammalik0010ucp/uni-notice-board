@@ -139,3 +139,108 @@ footer {
   font-weight: bold;
   text-decoration: underline;
 }
+
+/* Admissions form layout */
+.admission-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  padding: 1.75rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 960px;
+}
+
+.admission-form .form-title {
+  color: #004080;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1rem;
+}
+
+.input-field label {
+  display: block;
+  font-weight: 600;
+  color: #1f3a60;
+  margin-bottom: 0.35rem;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #c7d3e3;
+  border-radius: 6px;
+  font: inherit;
+  background-color: #fdfefe;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.input-field input:focus,
+.input-field select:focus,
+.input-field textarea:focus {
+  outline: none;
+  border-color: #06c;
+  box-shadow: 0 0 0 3px rgb(0 102 204 / 20%);
+}
+
+.form-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.btn-primary {
+  background-color: #06c;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #004080;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.info-card {
+  background-color: #f1f6ff;
+  border: 1px solid #c7d3e3;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #1f3a60;
+}
+
+@media (width <= 600px) {
+  .admission-form {
+    padding: 1.25rem 1rem;
+    margin: 1.5rem 0.75rem;
+  }
+
+  .form-actions {
+    justify-content: stretch;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
