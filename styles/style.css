@@ -103,3 +103,38 @@ footer {
     margin: 1rem;
   }
 }
+/* ===============================
+   Exams Page Styles
+   =============================== */
+
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.exam-table th,
+.exam-table td {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.exam-table th {
+  background-color: #004080;
+  color: #ffffff;
+}
+
+.exam-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.page-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
