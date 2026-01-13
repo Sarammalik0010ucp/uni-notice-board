@@ -1,0 +1,16 @@
+{
+  "name": "uni-notice-board",
+  "version": "1.0.0",
+  "description": "University Digital Notice Board static website",
+  "scripts": {
+    "lint:html": "htmlhint \"src/**/*.html\"",
+    "lint:css": "stylelint \"styles/**/*.css\"",
+    "build": "parcel build src/index.html --dist-dir dist"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "parcel": "^2.12.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
