@@ -5,6 +5,10 @@ on:
     branches:
       - develop
       - feature/**
+  pull_request:
+    branches:
+      - main
+      - develop
 
 jobs:
   lint_html:
