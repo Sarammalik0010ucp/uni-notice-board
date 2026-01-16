@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "University Digital Notice Board static website",
   "scripts": {
+    "clean": "rm -rf dist",
+    "build": "parcel build src/index.html src/notices.html src/exams.html src/admissions.html src/contact.html src/feedback.html --dist-dir dist --public-url ./",
     "lint:html": "htmlhint \"src/**/*.html\"",
     "lint:css": "stylelint \"styles/**/*.css\"",
-    "build": "parcel build src/index.html --dist-dir dist"
+    "lint:css:fix": "stylelint \"styles/**/*.css\" --fix"
   },
   "devDependencies": {
     "htmlhint": "^1.8.0",
