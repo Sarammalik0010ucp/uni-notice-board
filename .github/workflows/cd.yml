@@ -2,17 +2,23 @@ name: CD Pipeline
 
 on:
   workflow_run:
-    workflows: ["CI Pipeline"]           # must match the name: exactly (case-sensitive)
-    branches: [develop]                   # good — only trigger when CI ran on develop
+    workflows: ["CI Pipeline"]
+    branches: [develop]
     types:
       - completed
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}   # correct & important
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Deploy to Render
         run: |
-          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"   # fix: add quotes around secret
+          if [ -z "${{ secrets.RENDER_DEPLOY_HOOK }}" ]; then
+            echo "::error::Secret RENDER_DEPLOY_HOOK is empty or missing!"
+            exit 1
+          fi
+
+          echo "Triggering Render deploy..."
+          curl -f -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
